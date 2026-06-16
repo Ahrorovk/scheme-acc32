@@ -1,11 +1,11 @@
 ```mermaid
 graph TD
-    %% Настройки стилей
-    classDef reg fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef alu fill:#ff9,stroke:#333,stroke-width:2px;
-    classDef mem fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef mux fill:#fcc,stroke:#333,stroke-width:2px;
-    classDef cu fill:#ddd,stroke:#333,stroke-width:3px;
+    %% Настройки стилей (Черный текст, жирный шрифт, пастельные тона)
+    classDef reg fill:#ffb3ba,stroke:#333,stroke-width:2px,color:#000,font-weight:bold;
+    classDef alu fill:#ffffba,stroke:#333,stroke-width:2px,color:#000,font-weight:bold;
+    classDef mem fill:#bae1ff,stroke:#333,stroke-width:2px,color:#000,font-weight:bold;
+    classDef mux fill:#ffdfba,stroke:#333,stroke-width:2px,color:#000,font-weight:bold;
+    classDef cu fill:#e0e0e0,stroke:#333,stroke-width:3px,color:#000,font-weight:bold;
 
     %% --- ОБЪЯВЛЕНИЕ БЛОКОВ ПРОЦЕССОРА ---
     CU((Control Unit)):::cu
@@ -27,7 +27,7 @@ graph TD
     
     %% Формирование адреса
     PC -->|Адрес PC| MUX_ADDR
-    IR -->|Относительный адрес| MUX_ADDR
+    IR -->|Относ. или Абс. адрес| MUX_ADDR
     ACC -->|Косвенный адрес| MUX_ADDR
     
     MUX_ADDR -->|Выбранный Адрес| ADDR_DEC
